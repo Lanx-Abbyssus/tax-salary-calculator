@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Salary Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-card">
+        <div class="header">
+          <h2>Tax Salary Calculator</h2>
+          <p class="grey">Cambodia Salary Tax Calculator</p>
+        </div>
+
+        <div class="form-currency">
+          <h3>Currency</h3>
+          <ul class="currency-nav">
+            <li class="currency-type">
+              <a href="riel.html" class="active">Riel</a>
+            </li>
+
+            <li class="currency-type"><a href="dollar.html">Dollar</a></li>
+          </ul>
+        </div>
+
+        <div class="form-salary">
+          <label for="salary" class="label-text-salary"
+            ><h3>Monthly Salary (KHR)</h3></label
+          >
+          <input
+            type="number"
+            id="salary"
+            class="salary"
+            placeholder="Enter Monthly Salary in KHR"
+          />
+        </div>
+
+        <div class="marital-status">
+          <h3>Has Spouse?</h3>
+
+          <div class="yes-or-no">
+
+            <div class="yes">
+              <input type="radio" id="yes" value="yes" name="choice" />
+              <label for="yes">Yes</label>
+            </div>
+
+            <div class="No">
+              <input type="radio" id="No" value="no" name="choice" checked />
+              <label for="No">No</label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="total-children">
+          <label for="number-of-children" class="label-text-children"><h3>Total Children</h3></label>
+          <input type="number" min="0" max="9" id="number-of-children" value="0" />
+        </div>
+
+        <div class="btn-calculate">
+          <button id="calculate-btn">Calculate</button>
+        </div>
+
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Salary Tax</th>
+                <th>Tax Rate</th>
+                <th>Net Salary</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td id="tax-result">0 KHR</td>
+                <td id="rate-result">0 %</td>
+                <td id="net-result">0 KHR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="riel.js"></script>
+  </body>
+</html>
